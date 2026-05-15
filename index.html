@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soner Özhan | IT Specialist & Support</title>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+        /* Üst Kısım */
+        header {
+            height: 550px;
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+                        url('profil.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 3px solid #38bdf8;
+        }
+        h1 { color: #38bdf8; font-size: 3.5rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        
+        /* WhatsApp Butonu */
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+            padding: 18px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-top: 25px;
+            transition: 0.3s;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            display: inline-block;
+        }
+        .btn-whatsapp:hover { transform: scale(1.05); background-color: #128c7e; }
+
+        .container { padding: 60px 20px; max-width: 1100px; margin: auto; }
+        
+        /* Bölümler */
+        section { margin-bottom: 60px; }
+        h2 { color: #38bdf8; border-left: 5px solid #38bdf8; padding-left: 15px; margin-bottom: 30px; font-size: 2rem; }
+
+        .about-box {
+            background: #1e293b;
+            padding: 35px;
+            border-radius: 20px;
+            border: 1px solid #334155;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .grid { display: flex; gap: 25px; flex-wrap: wrap; }
+        .card {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 15px;
+            flex: 1;
+            min-width: 300px;
+            border: 1px solid #334155;
+            transition: 0.3s;
+            text-align: center;
+        }
+        .card:hover { border-color: #38bdf8; transform: translateY(-10px); background: #24334a; }
+        .card h3 { color: #38bdf8; margin-top: 0; }
+
+        footer { text-align: center; padding: 50px; background: #020617; color: #64748b; border-top: 1px solid #1e293b; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SONER ÖZHAN</h1>
+        <p style="font-size: 1.6rem; color: #94a3b8; margin-top: 10px;">Profesyonel IT Uzmanı & Sistem Yöneticisi</p>
+        <a href="https://wa.me/905316652579?text=Merhaba%20Soner,%20IT%20desteğine%20ihtiyacım%20var." class="btn-whatsapp" target="_blank">
+            🟢 HEMEN DESTEK AL
+        </a>
+    </header>
+
+    <div class="container">
+        
+        <section id="hakkimda">
+            <h2>Hakkımda</h2>
+            <div class="about-box">
+                <p>Merhaba, ben <strong>Soner Özhan</strong>. Bilgi teknolojileri dünyasında sistem yönetimi, network altyapısı ve teknik destek konularında uzmanlaşmış bir IT profesyoneliyim. Karmaşık donanım sorunlarından, sunucu yapılandırmalarına kadar geniş bir yelpazede hızlı ve kalıcı çözümler üretiyorum.</p>
+                <p>Teknolojiyi sadece bir iş olarak değil, bir tutku olarak görüyorum. Sistemlerin kesintisiz çalışması ve altyapı güvenliği benim önceliğimdir. 7/24 teknik destek ve danışmanlık hizmeti sunmaktayım.</p>
+            </div>
+        </section>
+
+        <section id="hizmetler">
+            <h2>Neler Yapıyorum?</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Sistem Yönetimi</h3>
+                    <p>Windows Server, Active Directory ve son kullanıcı sistemlerinin sorunsuz yönetimi.</p>
+                </div>
+                <div class="card">
+                    <h3>Network & Ağ</h3>
+                    <p>Switch kurulumları, kurumsal ağ yönetimi ve firewall yapılandırmaları.</p>
+                </div>
+                <div class="card">
+                    <h3>Donanım Desteği</h3>
+                    <p>Laptop, yazıcı ve endüstriyel cihazların bakım ve arıza onarım süreçleri.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Soner Özhan. Tüm hakları saklıdır. | IT Specialist Portfolio</p>
+    </footer>
+
+</body>
+</html>
