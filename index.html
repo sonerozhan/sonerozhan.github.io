@@ -72,7 +72,7 @@
         .action-buttons {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 12px;
             flex-wrap: wrap;
             margin-top: 20px;
         }
@@ -80,12 +80,12 @@
         .btn-action {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            padding: 12px 22px;
+            gap: 8px;
+            padding: 10px 18px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             transition: transform 0.2s, opacity 0.2s;
         }
 
@@ -104,6 +104,12 @@
             background-color: #334155;
             color: white;
             border: 1px solid var(--border-color);
+        }
+
+        .btn-linkedin {
+            background-color: #0a66c2;
+            color: white;
+            box-shadow: 0 4px 15px rgba(10, 102, 194, 0.3);
         }
 
         /* Bölüm Başlıkları */
@@ -125,14 +131,42 @@
             color: var(--accent-color);
         }
 
-        /* Hakkımda Kutusu */
-        .about-card {
+        /* Hakkımda ve Deneyim Kutuları */
+        .about-card, .experience-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             padding: 25px;
             border-radius: 12px;
             color: var(--text-muted);
             font-size: 1.05rem;
+        }
+
+        .experience-list {
+            list-style: none;
+        }
+
+        .experience-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .experience-item h4 {
+            color: var(--text-main);
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .experience-item span {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            font-weight: 600;
         }
 
         /* Yetenekler Grid */
@@ -236,10 +270,13 @@
             
             <div class="action-buttons">
                 <a href="https://wa.me/905316655279?text=Merhaba,%20destek%20almak%20istiyorum." class="btn-action btn-whatsapp" target="_blank">
-                    <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Destek Al (0531 665 52 79)
+                    <i class="fa-brands fa-whatsapp"></i> Destek Al
                 </a>
                 <a href="https://github.com/sonerozhan" class="btn-action btn-github" target="_blank">
-                    <i class="fa-brands fa-github" style="font-size: 1.2rem;"></i> GitHub Profilim
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com" class="btn-action btn-linkedin" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
                 </a>
             </div>
         </header>
@@ -249,6 +286,27 @@
             <h2 class="section-title"><i class="fa-solid fa-user"></i> Hakkımda</h2>
             <div class="about-card">
                 <p>Kurumsal şirketlerde ve bilgi işlem departmanlarında edindiğim tecrübelerle; ağ altyapıları, son kullanıcı operasyonları ve sistem yönetimi alanlarında profesyonel çözümler üretiyorum. Aynı zamanda modern web arayüzleri geliştirerek dijital projeler tasarlıyorum.</p>
+            </div>
+        </section>
+
+        <!-- İş Deneyimleri -->
+        <section>
+            <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> İş Deneyimleri</h2>
+            <div class="experience-card">
+                <ul class="experience-list">
+                    <li class="experience-item">
+                        <h4>Acarsan Holding</h4>
+                        <span>2025 - 2026</span>
+                    </li>
+                    <li class="experience-item">
+                        <h4>CMD Bilgisayar</h4>
+                        <span>2023 - 2024</span>
+                    </li>
+                    <li class="experience-item">
+                        <h4>Tim Tekno Bilgisayar</h4>
+                        <span>2022 - 2023</span>
+                    </li>
+                </ul>
             </div>
         </section>
 
