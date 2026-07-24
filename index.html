@@ -15,6 +15,7 @@
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --border-color: #334155;
+            --h1-color: #FFFFFF;
         }
 
         * {
@@ -29,28 +30,34 @@
             color: var(--text-main);
             line-height: 1.6;
             padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
         .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            background-color: var(--bg-color);
+            padding: 50px 20px;
+            border-radius: 20px;
         }
 
         /* Profil / Hero Alanı */
         .profile-header {
-            text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .profile-avatar {
-            width: 120px;
-            height: 120px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             overflow: hidden;
             border: 3px solid var(--accent-color);
-            margin: 0 auto 20px;
-            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+            margin: 0 auto 25px;
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
         }
 
         .profile-avatar img {
@@ -60,142 +67,56 @@
         }
 
         .profile-header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
+            font-size: 3rem;
+            margin-bottom: 8px;
+            color: var(--h1-color);
+            font-weight: 700;
         }
 
         .profile-header p {
             color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 20px;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
         }
 
         /* Hızlı Destek Butonu */
         .support-btn-container {
-            margin-top: 20px;
+            margin-top: 40px;
         }
 
         .btn-support {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            background-color: #22c55e;
+            gap: 15px;
+            background-color: #128c7e; /* WhatsApp Yeşili */
             color: white;
-            padding: 12px 25px;
-            border-radius: 30px;
+            padding: 18px 40px;
+            border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 1.4rem;
             transition: background 0.3s, transform 0.2s;
-            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+            box-shadow: 0 10px 25px rgba(18, 140, 126, 0.4);
+            border: 2px solid #128c7e;
         }
 
         .btn-support:hover {
-            background-color: #16a34a;
-            transform: translateY(-2px);
+            background-color: #075e54;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(18, 140, 126, 0.6);
         }
 
-        /* Bölüm Başlıkları */
-        section {
-            margin-bottom: 50px;
+        .btn-support i {
+            font-size: 1.8rem;
         }
 
-        .section-title {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .section-title i {
-            color: var(--accent-color);
-        }
-
-        /* Yetenekler Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
-
-        .skill-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 20px;
-            border-radius: 12px;
-        }
-
-        .skill-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            color: var(--accent-color);
-        }
-
-        .skill-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* Projeler Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-        }
-
-        .project-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: transform 0.3s, border-color 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-color);
-        }
-
-        .project-content {
-            padding: 20px;
-        }
-
-        .project-card h3 {
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-
-        .project-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-        }
-
-        .btn-project {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--bg-color);
-            padding: 8px 16px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: background 0.3s;
-        }
-
-        .btn-project:hover {
-            background-color: var(--accent-hover);
-        }
-
-        /* Alt Bilgi */
-        footer {
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            border-top: 1px solid var(--border-color);
-            padding-top: 20px;
+        /* Küçük Logo (Alt Köşe) */
+        .logo-corner {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            color: #64748b;
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -206,72 +127,25 @@
         <!-- Profil Başlığı -->
         <header class="profile-header">
             <div class="profile-avatar">
-                <!-- Profil Fotoğrafı (Fotoğrafını projenin olduğu klasöre 'profil.jpg' olarak atabilirsin veya doğrudan URL ekleyebilirsin) -->
-                <img src="profil.jpg" alt="Soner Özhan" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300'">
+                <!-- Fotoğrafın adını profil.jpg yaparsan doğrudan buraya oturacaktır -->
+                <img src="profil.jpg" alt="Soner Özhan">
             </div>
             <h1>Soner Özhan</h1>
             <p>IT Uzmanı & Web Geliştirici</p>
-            
-            <!-- Hızlı Destek Butonu (05316655279) -->
-            <div class="support-btn-container">
-                <a href="https://wa.me/905316655279?text=Merhaba,%20destek%20almak%20istiyorum." class="btn-support" target="_blank">
-                    <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Hemen Destek Al (0531 665 52 79)
-                </a>
-            </div>
         </header>
 
-        <!-- Yetenekler / Uzmanlık Alanları -->
-        <section>
-            <h2 class="section-title"><i class="fa-solid fa-code-branch"></i> Uzmanlık Alanlarım</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3><i class="fa-solid fa-network-wired"></i> Sistem Yönetimi</h3>
-                    <p>Active Directory, DHCP, e-posta yönetimi ve kurumsal ağ altyapı kurulumları.</p>
-                </div>
-                <div class="skill-card">
-                    <h3><i class="fa-solid fa-print"></i> Donanım & Çevre Birimleri</h3>
-                    <p>Son kullanıcı destek operasyonları, yazıcı yönetimi ve donanım arıza giderme.</p>
-                </div>
-                <div class="skill-card">
-                    <h3><i class="fa-solid fa-video"></i> Güvenlik Sistemleri</h3>
-                    <p>Kamera sistemleri kurulumu, takibi ve güvenlik altyapısı yönetimi.</p>
-                </div>
-                <div class="skill-card">
-                    <h3><i class="fa-solid fa-laptop-code"></i> Web Geliştirme</h3>
-                    <p>Modern arayüz tasarımları, GitHub Pages projeleri ve özel web çözümleri.</p>
-                </div>
-            </div>
-        </section>
+        <!-- Hızlı Destek Butonu (05316655279) -->
+        <div class="support-btn-container">
+            <a href="https://wa.me/905316655279?text=Merhaba,%20destek%20almak%20istiyorum." class="btn-support" target="_blank">
+                <i class="fab fa-whatsapp"></i> Hemen Destek Al (0531 665 52 79)
+            </a>
+        </div>
 
-        <!-- Projeler Vitrini -->
-        <section>
-            <h2 class="section-title"><i class="fa-solid fa-folder-open"></i> Projelerim</h2>
-            <div class="projects-grid">
-                
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>SleekBio Premium</h3>
-                        <p>Kişiselleştirilmiş modern biyo-link ve vitrin projesi.</p>
-                        <a href="./sleekbio-premium/" class="btn-project">Projeyi İncele</a>
-                    </div>
-                </div>
+    </div>
 
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Yeni Parti</h3>
-                        <p>Siyasi hareket ve topluluk yönetimi için geliştirilen özel web platformu.</p>
-                        <a href="./yeni-parti" class="btn-project">Projeyi İncele</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2026 Soner Özhan. Tüm hakları saklıdır.</p>
-        </footer>
-
+    <!-- Alt Bilgi Logosu -->
+    <div class="logo-corner">
+        Soner Özhan Digital
     </div>
 
 </body>
