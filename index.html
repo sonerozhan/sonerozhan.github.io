@@ -40,7 +40,7 @@
         /* Profil / Hero Alanı */
         .profile-header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .profile-avatar {
@@ -68,37 +68,51 @@
             margin-bottom: 20px;
         }
 
-        /* Hızlı Destek Butonu */
-        .support-btn-container {
+        /* İletişim Butonları */
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
             margin-top: 20px;
         }
 
-        .btn-support {
+        .btn-action {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background-color: #22c55e;
-            color: white;
-            padding: 12px 25px;
+            padding: 12px 22px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
-            transition: background 0.3s, transform 0.2s;
+            font-size: 0.95rem;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .btn-action:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .btn-whatsapp {
+            background-color: #22c55e;
+            color: white;
             box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
         }
 
-        .btn-support:hover {
-            background-color: #16a34a;
-            transform: translateY(-2px);
+        .btn-github {
+            background-color: #334155;
+            color: white;
+            border: 1px solid var(--border-color);
         }
 
         /* Bölüm Başlıkları */
         section {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .section-title {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 20px;
             border-bottom: 2px solid var(--border-color);
             padding-bottom: 10px;
@@ -109,6 +123,16 @@
 
         .section-title i {
             color: var(--accent-color);
+        }
+
+        /* Hakkımda Kutusu */
+        .about-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            border-radius: 12px;
+            color: var(--text-muted);
+            font-size: 1.05rem;
         }
 
         /* Yetenekler Grid */
@@ -194,6 +218,7 @@
             font-size: 0.9rem;
             border-top: 1px solid var(--border-color);
             padding-top: 20px;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -201,7 +226,7 @@
 
     <div class="container">
         
-        <!-- Profil Başlığı -->
+        <!-- Profil Başlığı ve İletişim -->
         <header class="profile-header">
             <div class="profile-avatar">
                 <i class="fa-solid fa-user-gear"></i>
@@ -209,15 +234,25 @@
             <h1>Soner Özhan</h1>
             <p>IT Uzmanı & Web Geliştirici</p>
             
-            <!-- Hızlı Destek Butonu (05316655279) -->
-            <div class="support-btn-container">
-                <a href="https://wa.me/905316655279?text=Merhaba,%20destek%20almak%20istiyorum." class="btn-support" target="_blank">
-                    <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Hemen Destek Al (0531 665 52 79)
+            <div class="action-buttons">
+                <a href="https://wa.me/905316655279?text=Merhaba,%20destek%20almak%20istiyorum." class="btn-action btn-whatsapp" target="_blank">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Destek Al (0531 665 52 79)
+                </a>
+                <a href="https://github.com/sonerozhan" class="btn-action btn-github" target="_blank">
+                    <i class="fa-brands fa-github" style="font-size: 1.2rem;"></i> GitHub Profilim
                 </a>
             </div>
         </header>
 
-        <!-- Yetenekler / Uzmanlık Alanları -->
+        <!-- Hakkımda Kısmı -->
+        <section>
+            <h2 class="section-title"><i class="fa-solid fa-user"></i> Hakkımda</h2>
+            <div class="about-card">
+                <p>Kurumsal şirketlerde ve bilgi işlem departmanlarında edindiğim tecrübelerle; ağ altyapıları, son kullanıcı operasyonları ve sistem yönetimi alanlarında profesyonel çözümler üretiyorum. Aynı zamanda modern web arayüzleri geliştirerek dijital projeler tasarlıyorum.</p>
+            </div>
+        </section>
+
+        <!-- Uzmanlık Alanları -->
         <section>
             <h2 class="section-title"><i class="fa-solid fa-code-branch"></i> Uzmanlık Alanlarım</h2>
             <div class="skills-grid">
