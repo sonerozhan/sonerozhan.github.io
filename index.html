@@ -3,178 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soner Özhan | IT Specialist & Support</title>
+    <title>Soner Özhan | IT Uzmanı & Web Geliştirici</title>
+    <!-- Font Awesome ikonları için -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
-            background-color: #0f172a;
-            color: #f8fafc;
-            font-family: 'Segoe UI', sans-serif;
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --accent-hover: #0ea5e9;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+        }
+
+        * {
             margin: 0;
-            scroll-behavior: smooth;
-        }
-    /* Üst Kısım */
-   header {
-    height: 680px;
-    background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.65)), url('profilim.png');
-    background-size: contain;
-    background-position: center;
-    background-color: #0f172a;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    text-align: right;
-    padding: 0 60px 60px 0;
-}
-        h1 { color: #38bdf8; font-size: 3.5rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
-        
-        /* WhatsApp Butonu */
-        .btn-whatsapp {
-            background-color: #25d366;
-            color: white;
-            padding: 18px 35px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.3rem;
-            margin-top: 25px;
-            transition: 0.3s;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            display: inline-block;
-        }
-        .btn-whatsapp:hover { transform: scale(1.05); background-color: #128c7e; }
-
-        .container { padding: 60px 20px; max-width: 1100px; margin: auto; }
-        
-        /* Bölümler */
-        section { margin-bottom: 60px; }
-        h2 { color: #38bdf8; border-left: 5px solid #38bdf8; padding-left: 15px; margin-bottom: 30px; font-size: 2rem; }
-
-        .about-box {
-            background: #1e293b;
-            padding: 35px;
-            border-radius: 20px;
-            border: 1px solid #334155;
-            font-size: 1.2rem;
-            line-height: 1.8;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        .grid { display: flex; gap: 25px; flex-wrap: wrap; }
-        .card {
-            background: #1e293b;
-            padding: 30px;
-            border-radius: 15px;
-            flex: 1;
-            min-width: 300px;
-            border: 1px solid #334155;
-            transition: 0.3s;
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Profil / Hero Alanı */
+        .profile-header {
             text-align: center;
+            margin-bottom: 50px;
         }
-        .card:hover { border-color: #38bdf8; transform: translateY(-10px); background: #24334a; }
-        .card h3 { color: #38bdf8; margin-top: 0; }
 
-        footer { text-align: center; padding: 50px; background: #020617; color: #64748b; border-top: 1px solid #1e293b; }
-        /* Uzmanlık Alanları Bölümü */
-    .services-container {
-        max-width: 1100px;
-        margin: 50px auto;
-        padding: 0 20px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-    }
-    .service-card {
-        background-color: #1e293b;
-        border: 1px solid #334155;
-        border-radius: 10px;
-        padding: 30px;
-        text-align: center;
-        transition: transform 0.3s ease, border-color 0.3s ease;
-    }
-    .service-card:hover {
-        transform: translateY(-5px);
-        border-color: #38bdf8;
-    }
-    .service-card h3 {
-        color: #38bdf8;
-        margin-bottom: 15px;
-        font-size: 1.4rem;
-    }
-    .service-card p {
-        color: #94a3b8;
-        font-size: 0.95rem;
-        line-height: 1.6;
-    }
-    .section-title {
-        text-align: center;
-        color: #f8fafc;
-        margin-top: 60px;
-        font-size: 2rem;
-    }
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-color), #6366f1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+        }
+
+        .profile-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .profile-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        /* Hızlı Destek Butonu */
+        .support-btn-container {
+            margin-top: 20px;
+        }
+
+        .btn-support {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #22c55e;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+        }
+
+        .btn-support:hover {
+            background-color: #16a34a;
+            transform: translateY(-2px);
+        }
+
+        /* Bölüm Başlıkları */
+        section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: var(--accent-color);
+        }
+
+        /* Yetenekler Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .skill-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        .skill-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Projeler Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .project-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .btn-project {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .btn-project:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Alt Bilgi */
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>SONER ÖZHAN</h1>
-        <p style="font-size: 1.2rem; color: #f8fafc; margin-top: 15px; margin-bottom: 5px; font-weight: 300; letter-spacing: 1px; font-style: italic;">
-    "Geleceğin IT Altyapısını Bugünden Yönetiyoruz"
-</p>
-        <p style="font-size: 1.6rem; color: #94a3b8; margin-top: 10px;">Profesyonel IT Uzmanı & Sistem Yöneticisi</p>
-        <a href="https://wa.me/905316652579?text=Merhaba%20Soner,%20IT%20desteğine%20ihtiyacım%20var." class="btn-whatsapp" target="_blank">
-            🟢 HEMEN DESTEK AL
-        </a>
-    </header>
-    <h2 class="section-title">Uzmanlık Alanlarım</h2>
-    <div class="services-container">
-        <div class="service-card">
-            <h3>Sistem Yönetimi</h3>
-            <p>Windows ve macOS işletim sistemlerinin kurulumu, optimizasyonu ve kullanıcı verilerinin güvenli bir şekilde taşınması işlemleri.</p>
-        </div>
-        <div class="service-card">
-            <h3>Network & Altyapı</h3>
-            <p>Ağ anahtarları (Switch) ve modem konfigürasyonları, kablolama ve bağlantı sorunlarının giderilmesi.</p>
-        </div>
-        <div class="service-card">
-            <h3>Donanım & Destek</h3>
-            <p>Sunucu, bilgisayar ve endüstriyel çevre birimlerinin arıza tespiti, bakımı ve uzaktan kesintisiz destek hizmetleri.</p>
-        </div>
-    </div>
-
     <div class="container">
         
-        <section id="hakkimda">
-            <h2>Hakkımda</h2>
-            <div class="about-box">
-                <p>Merhaba, ben <strong>Soner Özhan</strong>. Bilgi teknolojileri dünyasında sistem yönetimi, network altyapısı ve teknik destek konularında uzmanlaşmış bir IT profesyoneliyim. Karmaşık donanım sorunlarından, sunucu yapılandırmalarına kadar geniş bir yelpazede hızlı ve kalıcı çözümler üretiyorum.</p>
-                <p>Teknolojiyi sadece bir iş olarak değil, bir tutku olarak görüyorum. Sistemlerin kesintisiz çalışması ve altyapı güvenliği benim önceliğimdir. 7/24 teknik destek ve danışmanlık hizmeti sunmaktayım.</p>
+        <!-- Profil Başlığı -->
+        <header class="profile-header">
+            <div class="profile-avatar">
+                <i class="fa-solid fa-user-gear"></i>
+            </div>
+            <h1>Soner Özhan</h1>
+            <p>IT Uzmanı & Web Geliştirici</p>
+            
+            <!-- Hızlı Destek Butonu (05316655279) -->
+            <div class="support-btn-container">
+                <a href="https://wa.me/905316655279?text=Merhaba,%20destek%20almak%20istiyorum." class="btn-support" target="_blank">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Hemen Destek Al (0531 665 52 79)
+                </a>
+            </div>
+        </header>
+
+        <!-- Yetenekler / Uzmanlık Alanları -->
+        <section>
+            <h2 class="section-title"><i class="fa-solid fa-code-branch"></i> Uzmanlık Alanlarım</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3><i class="fa-solid fa-network-wired"></i> Sistem Yönetimi</h3>
+                    <p>Active Directory, DHCP, e-posta yönetimi ve kurumsal ağ altyapı kurulumları.</p>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fa-solid fa-print"></i> Donanım & Çevre Birimleri</h3>
+                    <p>Son kullanıcı destek operasyonları, yazıcı yönetimi ve donanım arıza giderme.</p>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fa-solid fa-video"></i> Güvenlik Sistemleri</h3>
+                    <p>Kamera sistemleri kurulumu, takibi ve güvenlik altyapısı yönetimi.</p>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fa-solid fa-laptop-code"></i> Web Geliştirme</h3>
+                    <p>Modern arayüz tasarımları, GitHub Pages projeleri ve özel web çözümleri.</p>
+                </div>
             </div>
         </section>
 
-        <section id="hizmetler">
-            <h2>Neler Yapıyorum?</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Sistem Yönetimi</h3>
-                    <p>Windows Server, Active Directory ve son kullanıcı sistemlerinin sorunsuz yönetimi.</p>
+        <!-- Projeler Vitrini -->
+        <section>
+            <h2 class="section-title"><i class="fa-solid fa-folder-open"></i> Projelerim</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>SleekBio Premium</h3>
+                        <p>Kişiselleştirilmiş modern biyo-link ve vitrin projesi.</p>
+                        <a href="./sleekbio-premium/" class="btn-project">Projeyi İncele</a>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Network & Ağ</h3>
-                    <p>Switch kurulumları, kurumsal ağ yönetimi ve firewall yapılandırmaları.</p>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Nostalji Çay Bahçesi</h3>
+                        <p>İşletmeler için hazırlanan özel web menü ve dijital tanıtım sayfası.</p>
+                        <a href="./nostalji-cay-bahcesi" class="btn-project">Projeyi İncele</a>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Donanım Desteği</h3>
-                    <p>Laptop, yazıcı ve endüstriyel cihazların bakım ve arıza onarım süreçleri.</p>
-                </div>
+
             </div>
         </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Soner Özhan. Tüm hakları saklıdır.</p>
+        </footer>
 
     </div>
-
-    <footer>
-        <p>&copy; 2026 Soner Özhan. Tüm hakları saklıdır. | IT Specialist Portfolio</p>
-    </footer>
 
 </body>
 </html>
