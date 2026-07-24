@@ -47,14 +47,16 @@
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent-color), #6366f1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: white;
+            overflow: hidden;
+            border: 3px solid var(--accent-color);
             margin: 0 auto 20px;
             box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+        }
+
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .profile-header h1 {
@@ -204,7 +206,8 @@
         <!-- Profil Başlığı -->
         <header class="profile-header">
             <div class="profile-avatar">
-                <i class="fa-solid fa-user-gear"></i>
+                <!-- Profil Fotoğrafı (Fotoğrafını projenin olduğu klasöre 'profil.jpg' olarak atabilirsin veya doğrudan URL ekleyebilirsin) -->
+                <img src="profil.jpg" alt="Soner Özhan" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300'">
             </div>
             <h1>Soner Özhan</h1>
             <p>IT Uzmanı & Web Geliştirici</p>
@@ -255,9 +258,9 @@
 
                 <div class="project-card">
                     <div class="project-content">
-                        <h3>Nostalji Çay Bahçesi</h3>
-                        <p>İşletmeler için hazırlanan özel web menü ve dijital tanıtım sayfası.</p>
-                        <a href="./nostalji-cay-bahcesi" class="btn-project">Projeyi İncele</a>
+                        <h3>Yeni Parti</h3>
+                        <p>Siyasi hareket ve topluluk yönetimi için geliştirilen özel web platformu.</p>
+                        <a href="./yeni-parti" class="btn-project">Projeyi İncele</a>
                     </div>
                 </div>
 
